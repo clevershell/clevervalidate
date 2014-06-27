@@ -2,33 +2,51 @@
 	<head>
 	<script src="./clevervalidate.js"></script>
     <script src="./jquery.js"></script>
+ 	<link href="cleverbootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<style>
+	.content{
+		float:center;
+		width:70%;
+		overflow:auto;
+	}	
+	.input-group-addon {
+		width:20%; 
+	}
+	.form-group {
+		width:100%;
+	}
+	</style>
 	</head>
 	<body>
 
 <div class="panel panel-default square-btn-adjust" >
-                        <div class="panel-heading square-btn-adjust" style="background:gray;background: rgb(100, 172, 172);color: white;font-size: 23px;">
-						Insurance
-                        </div>
+                        <div class="panel-heading square-btn-adjust" style="background:gray;background:white;color: black;font-size: 23px;box-shadow:3px 7px 3px gray;text-align:center">
+						Clevervalidate 
+                        </div> 
 						<br>
+						<div class="content" style="left:20%;position:fixed">
 						<form action="http://www.clevershell.com" method="get" id="insurance" onsubmit="return validateAndChangeBorder('insurance','','');">
                         <!-- /.panel-heading -->
-						<br><br>
-					 					<input type="hidden" name="app_id" value="<?php echo $app_id; ?>" />
+						<h1> Register Yourself </h1><br>					 					<input type="hidden" name="app_id" value="<?php echo $app_id; ?>" />
 										<div class="form-group input-group">
-                                            <span class="input-group-addon">Amount Of Insurance</span>
-                                            <input type="text" class="form-control" placeholder="Amount" name="amtofinsurance" req="true" />
+                                            <span class="input-group-addon">Full Name*</span>
+                                            <input type="text" class="form-control" placeholder="" name="amtofinsurance" req="true" style="width:100%" />
                                         </div>
 										<div class="form-group input-group">
-                                            <span class="input-group-addon">Tenure Of Insurance Covered (Months) </span>
-                                            <input type="text" class="form-control" placeholder="Number of Months" name="tenure" req="true">
+                                            <span class="input-group-addon">Nickname </span>
+                                            <input type="text" class="form-control" placeholder="" name="tenure">
                                         </div>
 										<div class="form-group input-group">
-                                            <span class="input-group-addon">Amount of Premium</span>
-                                            <input type="text" class="form-control" placeholder="Amount" name="amtofpremium" req="true">
+                                            <span class="input-group-addon">Username* </span>
+                                            <input type="text" class="form-control" placeholder="" name="tenure" req="true">
                                         </div>
 										<div class="form-group input-group">
-                                            <span class="input-group-addon">Frequence Of Premium Payment</span>
-                                            <input type="text" class="form-control" placeholder="Y/HY/Q/M" name="amtoffreq" req="true">
+                                            <span class="input-group-addon">Password*</span>
+                                            <input type="password" class="form-control" placeholder="" name="amtofpremium" req="true">
+                                        </div>
+										<div class="form-group input-group">
+                                            <span class="input-group-addon">Retype Password*</span>
+                                            <input type="password" class="form-control" placeholder="" name="amtoffreq" req="true">
                                         </div>
 											<br>
                                                 <input type="submit" class="btn btn-primary square-btn-adjust" value="save">
@@ -36,6 +54,7 @@
 
                     </div>
 					</form>
+					</div>
 						<table id="getContent" style="display:none">
 						<tbody>
                                         <tr>
@@ -48,5 +67,6 @@
                                     </tbody>
 						</table>
 	</body>
+	 <script src="cleverbootstrap/js/bootstrap.min.js"></script>
 </html>
 						
