@@ -1,0 +1,52 @@
+<html>
+	<head>
+	<script src="./clevervalidate.js"></script>
+    <script src="./jquery.js"></script>
+	</head>
+	<body>
+
+<div class="panel panel-default square-btn-adjust" >
+                        <div class="panel-heading square-btn-adjust" style="background:gray;background: rgb(100, 172, 172);color: white;font-size: 23px;">
+						Insurance
+                        </div>
+						<br>
+						<form action="http://www.clevershell.com" method="get" id="insurance" onsubmit="return validateAndChangeBorder('insurance','','');">
+                        <!-- /.panel-heading -->
+						<br><br>
+					 					<input type="hidden" name="app_id" value="<?php echo $app_id; ?>" />
+										<div class="form-group input-group">
+                                            <span class="input-group-addon">Amount Of Insurance</span>
+                                            <input type="text" class="form-control" placeholder="Amount" name="amtofinsurance" req="true" />
+                                        </div>
+										<div class="form-group input-group">
+                                            <span class="input-group-addon">Tenure Of Insurance Covered (Months) </span>
+                                            <input type="text" class="form-control" placeholder="Number of Months" name="tenure" req="true">
+                                        </div>
+										<div class="form-group input-group">
+                                            <span class="input-group-addon">Amount of Premium</span>
+                                            <input type="text" class="form-control" placeholder="Amount" name="amtofpremium" req="true">
+                                        </div>
+										<div class="form-group input-group">
+                                            <span class="input-group-addon">Frequence Of Premium Payment</span>
+                                            <input type="text" class="form-control" placeholder="Y/HY/Q/M" name="amtoffreq" req="true">
+                                        </div>
+											<br>
+                                                <input type="submit" class="btn btn-primary square-btn-adjust" value="save">
+											<hr>
+
+                    </div>
+					</form>
+						<table id="getContent" style="display:none">
+						<tbody>
+                                        <tr>
+                                            <td> Sachin Shamanand Kumbhojkar </td>
+                                            <td> 23 </td>
+                                            <td> Son</td>
+											<td> No </td>
+                                            <td> 8 Lacs/Anm</td>
+                                        </tr>
+                                    </tbody>
+						</table>
+	</body>
+</html>
+						
